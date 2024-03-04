@@ -1,17 +1,17 @@
 pipeline {
     agent any // Run on any available agent
     stages {
-        stage('Clone') {
+        stage('Info') {
             steps {
-                deleteDir()
-                sh 'git clone https://github.com/terkelinux/my-jenkins.git' // Replace with your repository URL
                 sh 'pwd'
+                sh 'whoami'
+                sh 'hostname'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'echo javac' 
+                sh 'echo building...' 
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
                         sh 'echo “unit test”'
                     }
                 }
-                stage('ntegration test') {
+                stage('Integration test') {
                     steps {
                         sh 'echo “unit test”' 
                     }
