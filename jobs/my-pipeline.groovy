@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/terkelinux/my-jenkins.git' // Replace with your repository URL
+                deleteDir()
+                sh 'git clone https://github.com/terkelinux/my-jenkins.git' // Replace with your repository URL
             }
         }
 
