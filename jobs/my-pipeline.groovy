@@ -5,6 +5,7 @@ pipeline {
             steps {
                 deleteDir()
                 sh 'git clone https://github.com/terkelinux/my-jenkins.git' // Replace with your repository URL
+                sh 'pwd'
             }
         }
 
