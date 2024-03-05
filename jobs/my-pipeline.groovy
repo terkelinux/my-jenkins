@@ -6,6 +6,7 @@ pipeline {
                 sh 'pwd'
                 sh 'whoami'
                 sh 'hostname'
+                sh 'uptime'
             }
         }
 
